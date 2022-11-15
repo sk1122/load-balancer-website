@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPC Load Balancer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Cormorant', serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1em;
+            text-align: center;
+        }
+        
+        .title {
+            font-size: 4em;
+            font-family: 'Cormorant', serif;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .containerWithP > p {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-size:25px;
+            width:55%;
+        }
+
+        @media screen and (min-width: 250px) and (max-width: 600px) {
+            .containerWithP > p {
+                margin-top: 10px;
+                margin-bottom: 0;
+                font-size:25px;
+                width:95%;
+            }
+
+            .container:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 1em;
+                padding-bottom: 4em;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">RPC Load Balancer</h1>
+        <p style="font-size:18px;font-weight:600;margin:0;">Load Balance RPC Calls between multiple RPCs</p>
+    </div>
+
+    <div class="container containerWithP" style="text-align:center;">
+        <p>
+            Currently, there are multiple RPC Providers like <b>Alchemy, Ankr, Infura & more</b> which provide more or less same services but there main difference is in their response times.
+        some are fast, some are slow, some providers might have blocked some JSON-RPC methods, some are down.
+        You need to code in a way that you overcome all this possible errors and doing it again and again just sucks!
+        <br />Don't worry, We are here to save your day</p>
+        <p><b>Introducing Fetcch✨ - Load balance RPC calls</b></p>
+        <p>We help you load balance RPC requests between multiple RPC providers, enable caching at client level, retries with different RPC providers on failures and much more!</p>
+        <p>We use 2 different algorithms for load balancing - <b>Round Robin & Dynamic Load Balancing</b></p>
+        <p>SDK is pretty straight forward to use</p>
+        <p><a href="https://github.com/sk1122/rpc-load-balancer/" target="_blank">Docs</a></p>
+    </div>
+</body>
+</html>
